@@ -1,25 +1,22 @@
-// // 키보드 입력 방식을 반드시 알아야 한다.
-// // prompt()
+const name = document.getElementById('userName').value;
+const email = document.getElementById('userEmail').value;
+const age = document.getElementById('userAge').value;
+const city = document.getElementById('userCity').value;
+const isAgreed = document.getElementById('agree').checked;
 
-// // let input = parseInt(prompt("정수 입력하시오."));
-
-// while (1) {
-//   let input = parseInt(prompt("정수 입력하시오."));
-//   if (input === 7) {
-//     console.log("7이 입력되었으니 종료합니다.");
-//     break;
-//   }
-// }
-
-while (1) {
-  let input = parseInt(prompt("정수 입력하시오."));
-  if (input === 7) {
-    console.log("7이 입력되었으니 종료합니다.");
+const genderRadios = document.getElementById('gender'); //위치임
+let gender = '';
+for (let radio of genderRadios) {
+  if (radio.checked) {
+    gender = radio.value;
     break;
   }
-  let tot = 0;
-  for (i = 0; i <= input; i++) {
-    tot = tot + i;
-  }
-  console.log(tot);
 }
+
+if (!name || !email) {
+}
+
+if (!isAgreed) {
+}
+
+const resultDiv = document.getElementById('result'); //html에 div에 내용 없으니까 새로운 내용을 넣기 위해
